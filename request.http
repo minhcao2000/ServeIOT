@@ -1,0 +1,51 @@
+GET http://localhost:3008/ada
+
+###
+POST http://192.168.1.206:3008/ada/temperature/24
+
+###
+POST http://localhost:3008/ada/
+Content-Type: application/json
+
+{
+    "flow1": "40",
+    "flow2": "30",
+    "flow3": "40",
+    "circle": "15",
+    "clock": "02:15 AM - 03:15 AM",
+    "selection4": "1",
+    "selection5": "1",
+    "selection6": "0"
+}
+
+###
+GET http://localhost:3008/scheduler
+
+###
+POST http://localhost:3008/scheduler
+Content-Type: application/json
+
+{
+    "name": "Scheduler 2",
+    "flow1": "20",
+    "flow2": "30",
+    "flow3": "40",
+    "circle": "15",
+    "startTime": "2:15",
+    "endTime": "3:15",
+    "selection4": true,
+    "selection5": true,
+    "selection6": true
+}
+
+###
+DELETE http://localhost:3008/scheduler
+Content-Type: application/json
+
+{
+   "index": 1
+}
+
+
+//gửi data bằng api nè
+//okiela nhé`
